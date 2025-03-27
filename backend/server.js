@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname, "FRONTEND"))); // Serve frontend
 
 // PostgreSQL DB setup
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL || "postgresql://chatapp_db_jsim_user:YOUR_PASSWORD@dpg-cvgm48btq21c73e5n8og-a.singapore-postgres.render.com/chatapp_db_jsim",
+  connectionString: process.env.DATABASE_URL,
   ssl: { rejectUnauthorized: false }
 });
 
